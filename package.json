@@ -1,0 +1,56 @@
+{
+  "name": "@augmentedjs/gcp-resource-manager",
+  "version": "0.1.0",
+  "description": "Resource Manager for Google Cloud Platform (storage)",
+  "main": "dist/gcp-resource-manager.js",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack --mode development",
+    "build": "NODE_ENV=production webpack --mode production",
+    "test": "NODE_ENV=test webpack --mode development --entry ./src/index.mjs --output-path ./temp --progress && NODE_ENV=test mocha --require @babel/register --require test/helper.js -c test",
+    "docs": "rm -rf jsdoc && jsdoc ./src -r -d ./jsdoc/ -R ./README.md -t ./node_modules/foodoc/template -c ./jsdoc.conf.json -P ./package.json",
+    "readme": "./node_modules/documentation/bin/documentation.js readme ./src/index.mjs -f md --section=API",
+    "clean": "rm -rf node_modules",
+    "reinstall": "npm run clean && npm install",
+    "rebuild": "npm run clean && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Augmentedjs/gcp-resource-manager.git"
+  },
+  "keywords": [
+    "plugin",
+    "augmentedjs"
+  ],
+  "author": "Bob Warren <jedi.master@augmentedjs.com>",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=14"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/node": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "@babel/register": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-remove-template-literals-whitespace": "^1.0.4",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "chai": "^4.3.4",
+    "clean-webpack-plugin": "^3.0.0",
+    "documentation": "^13.2.5",
+    "foodoc": "0.0.9",
+    "jsdoc": "^3.6.7",
+    "mocha": "^9.0.0",
+    "webpack": "^5.39.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "@augmentedjs/resource-manager": "^1.0.2",
+    "@google-cloud/storage": "^5.8.5"
+  },
+  "bugs": {
+    "url": "https://github.com/Augmentedjs/gcp-resource-manager/issues"
+  },
+  "homepage": "https://github.com/Augmentedjs/gcp-resource-manager#readme"
+}

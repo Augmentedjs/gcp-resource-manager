@@ -1,0 +1,224 @@
+<!-- start:readme.hbs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+		<title>Augmented.js Next Service</title>
+		<link rel="icon" type="image/png" href="favicon.png"/>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
+		<link type="text/css" rel="stylesheet" href="css/template.min.css">
+			<style>
+				.page-header,
+				pre.code-toolbar > .toolbar:hover {
+					background-color: #607D8B;
+				}
+				.callout-primary,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus,
+				pre.code-toolbar > .toolbar:hover {
+					border-left-color: #607D8B;
+				}
+				pre.code-toolbar > .toolbar:hover {
+					border-bottom-color: #607D8B;
+				}
+				.callout-primary h5,
+				.symbol-title.collapsible-symbol .toggle-icon,
+				.breadcrumb li a,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus {
+					color: #607D8B;
+				}
+			</style>
+		<script type="text/javascript">
+			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"ddd MMM Do YYYY","systemName":"Augmented.js Next Service","systemSummary":"Augmented.js Next Service - Simply Development.","systemLogo":"img/jensen-silo-circle-small.png","systemColor":"#607D8B","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"<a href='http://www.augmentedjs.com'>Augmented.js Homepage</a>","copyright":"","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":true,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":false,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"logoFile":"public/images/jensen-silo-circle-small.png","navType":"vertical","protocol":"html://"};
+			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_AFILTER_ENABLED = false;
+		</script>
+</head>
+<body>
+	<!-- start:navbar.hbs -->
+	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/jensen-silo-circle-small.png);">
+					Augmented.js Next Service
+				</a>
+				<!-- displayed on small devices -->
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="topNavigation">
+				<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="GCPResourceManager.html">GCPResourceManager</a></li>
+									</ul>
+								</li>
+				</ul>
+					<!-- start:lunr-search-navbar.hbs -->
+					<form class="navbar-form navbar-right" role="search">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search" id="lunr-search-input">
+							<div class="input-group-btn">
+								<button class="btn btn-default" id="lunr-search-submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<!-- start:lunr-search-navbar.hbs -->		</div>
+		</div>
+	</header>
+	<!-- end:navbar.hbs -->		<div class="page-header">
+			<div class="container">
+				<span class="kind">readme</span>
+				<h1><span class="name">Augmented.js Next Service</span></h1>
+				<div class="summary"><p>Augmented.js Next Service - Simply Development.</p></div>			</div>
+		</div>
+	<div class="container content">
+		<div class="row">
+			<div class="col-md-9 main-content">
+		<section class="readme-section">
+			<article><h1>gcp-resource-manager</h1>
+<p>Resource Manager for Google Cloud Platform (storage)</p>
+<h1>API</h1>
+<!-- Generated by documentation.js. Update this documentation by updating the source code. -->
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#gcpresourcemanager">GCPResourceManager</a>
+<ul>
+<li><a href="#parameters">Parameters</a></li>
+<li><a href="#bucket">bucket</a>
+<ul>
+<li><a href="#properties">Properties</a></li>
+</ul>
+</li>
+<li><a href="#read">read</a>
+<ul>
+<li><a href="#parameters-1">Parameters</a></li>
+</ul>
+</li>
+<li><a href="#write">write</a>
+<ul>
+<li><a href="#parameters-2">Parameters</a></li>
+</ul>
+</li>
+<li><a href="#exists">exists</a>
+<ul>
+<li><a href="#parameters-3">Parameters</a></li>
+</ul>
+</li>
+<li><a href="#createreadstream">createReadStream</a>
+<ul>
+<li><a href="#parameters-4">Parameters</a></li>
+</ul>
+</li>
+<li><a href="#readall">readAll</a>
+<ul>
+<li><a href="#parameters-5">Parameters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>GCPResourceManager</h2>
+<p><strong>Extends Strategy</strong></p>
+<p>Google Cloud Storage Resource Manager Strategy</p>
+<h3>Parameters</h3>
+<ul>
+<li><code>options</code>   (optional, default <code>{}</code>)</li>
+</ul>
+<h3>bucket</h3>
+<h4>Properties</h4>
+<ul>
+<li><code>GCP</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></strong> Storage Bucket</li>
+</ul>
+<h3>read</h3>
+<p>Read a file from storage</p>
+<h4>Parameters</h4>
+<ul>
+<li><code>path</code>  {string} path or filename</li>
+</ul>
+<p>Returns <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> Returns file contents</p>
+<h3>write</h3>
+<p>Write a file to storage</p>
+<h4>Parameters</h4>
+<ul>
+<li><code>path</code>  {string} path or filename</li>
+<li><code>data</code>  {any} Data to write</li>
+</ul>
+<p>Returns <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> path or filename</p>
+<h3>exists</h3>
+<p>Checks if a file exists on storage</p>
+<h4>Parameters</h4>
+<ul>
+<li><code>path</code>  {string} path or filename</li>
+</ul>
+<p>Returns <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></strong> Returns true if exists</p>
+<h3>createReadStream</h3>
+<p>Creates a read stream</p>
+<h4>Parameters</h4>
+<ul>
+<li><code>path</code>  {string} path or filename</li>
+</ul>
+<p>Returns <strong>ReadStreamHandle</strong> Returns a read stream handle</p>
+<h3>readAll</h3>
+<p>Reads the contents on a 'directory' in storage</p>
+<h4>Parameters</h4>
+<ul>
+<li><code>path</code>  {string} path or filename</li>
+</ul>
+<p>Returns <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></strong> Returns an array of files</p></article>
+		</section>
+			</div>
+				<div class="col-md-3 side-content">
+					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
+				</div>
+		</div>
+	</div>
+	<footer>
+				<div class="footer-option"><a href='http://www.augmentedjs.com'>Augmented.js Homepage</a></div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Wed Jun 16th 2021 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script src="js/prism.min.js"></script>
+	<script src="js/template.min.js"></script>
+		<!-- start:lunr-search-modal.hbs -->
+		<div class="modal fade" id="lunr-search-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Search results</h4>
+					</div>
+					<div class="modal-body" id="lunr-search-body">
+					</div>
+					<div class="modal-footer" id="lunr-search-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
+	
+</body>
+</html>
+<!-- end:readme.hbs -->
