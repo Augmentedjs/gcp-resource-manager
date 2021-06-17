@@ -1,4 +1,4 @@
-global.Core = require("../temp/next-core-plugin.js");
+global.Core = require("../temp/gcp-resource-manager.js");
 
 const chai = require("chai");
 global.chai = chai;
