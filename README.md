@@ -37,7 +37,7 @@ Google Cloud Storage Resource Manager Strategy
 
 #### Properties
 
-*   `GCP` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Storage Bucket
+*   `bucket` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** GCP Storage Bucket
 
 ### read
 
