@@ -1,3 +1,3 @@
-import GCPResourceManager from "./gcpResourceManager.mjs";
+import GCPStrategy from "./gcpResourceManager.mjs";
 
-export { GCPResourceManager };
+export { GCPStrategy };

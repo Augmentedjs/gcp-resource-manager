@@ -4,7 +4,7 @@ import { Strategy } from "@augmentedjs/resource-manager";
  * Google Cloud Storage Resource Manager Strategy
  * @extends Strategy
  */
-class GCPResourceManager extends Strategy {
+class GCPStrategy extends Strategy {
   constructor(options = {}) {
     super(options);
     /**
@@ -19,7 +19,7 @@ class GCPResourceManager extends Strategy {
    * @returns {string} Returns file contents
    */
   read(path) {
-    if (path) {
+    if (path && this.bucket) {
       try {
         // console.debug("read", path);
         const stream = this.createReadStream(path);
@@ -35,8 +35,10 @@ class GCPResourceManager extends Strategy {
         .on("error", (err) => {
           console.error(err);
         });
-      } catch (err) {
-        console.error(err);
+        return buf;
+      } catch (e) {
+        console.error(e);
+        throw new Error(e);
       }
     }
     return null;
@@ -49,20 +51,32 @@ class GCPResourceManager extends Strategy {
    * @returns {string} path or filename
    */
   write(path, data) {
-    if (path && data) {
-      try {
-        const file = this_bucket.file(path);
-        file.save(data, (err) => {
-          if (!err) {
-            // File written successfully.
-            return path;
-          }
-          console.error(err);
-        });
-        // console.debug("write", path);
-      } catch (err) {
-        console.error(err);
-      }
+    if (path && data && this.bucket) {
+      return new Promise((resolve, reject) =>{ 
+        const file = this.bucket.file(path);
+        if (file) {
+          resolve(file);
+        } else {
+          reject("No File!")
+        }
+      })
+      .then(async (file) => {
+        const ret = await file.save(data);
+        if (ret) {
+          file.makePublic();
+          return path;
+        } else {
+          throw new Error("Write failed");
+        }
+      })
+      .then((path) => {
+        // console.debug(path);
+        return path;
+      })
+      .catch((e) => {
+        console.error(e);
+        throw new Error(e);
+      });
     }
     return null;
   };
@@ -73,9 +87,9 @@ class GCPResourceManager extends Strategy {
    * @returns {boolean} Returns true if exists
    */
   exists(path) {
-    if (path) {
+    if (path && this.bucket) {
       try {
-        const file = this_bucket.file(path);
+        const file = this.bucket.file(path);
         file.exists((err, exists) => {
           if (!err) {
             return exists;
@@ -94,8 +108,8 @@ class GCPResourceManager extends Strategy {
    * @returns {ReadStreamHandle} Returns a read stream handle
    */
   createReadStream(path) {
-    if (path) {
-      const file = this_bucket.file(path);
+    if (path && this.bucket) {
+      const file = this.bucket.file(path);
       if (file) {
         return file.createReadStream(path);
       }
@@ -109,12 +123,12 @@ class GCPResourceManager extends Strategy {
    * @returns {array} Returns an array of files
    */
   readAll(path) {
-    if (path) {
-      const [files] = this_bucket.getFiles();
+    if (path && this.bucket) {
+      const [files] = this.bucket.getFiles();
       return files;
     }
     return null;
   };
 };
 
-export default GCPResourceManager;
+export default GCPStrategy;
