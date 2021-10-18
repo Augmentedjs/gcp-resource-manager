@@ -69,5 +69,3 @@ package-lock.json
 dist
 temp
 generated/*.js
-setenv.sh
-pixelart-3dd2c8abfd8d.json

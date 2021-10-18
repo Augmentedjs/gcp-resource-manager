@@ -1,7 +1,7 @@
 const GCPStrategy = Core.GCPStrategy;
 
 describe("Given a GCP Strategy", () => {
-  let p;
+  let s;
 
   describe("can create an instance", () => {
     beforeEach((done) => {
