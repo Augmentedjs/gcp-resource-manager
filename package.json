@@ -1,6 +1,6 @@
 {
   "name": "@augmentedjs/gcp-resource-manager",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Resource Manager for Google Cloud Platform (storage)",
   "main": "dist/gcp-resource-manager.js",
   "scripts": {
