@@ -25,17 +25,20 @@ class GCPStrategy extends Strategy {
         const stream = this.createReadStream(path);
         // console.log('Concat Data');
         let buf = "";
-        stream.on("data", (d) => {
+        return stream
+        .on("data", (d) => {
           buf += d;
-        }).on("end", () => {
-          // console.log(buf);
+        })
+        .on("end", () => {
+          console.info("buf", buf);
           // console.log("End");
           return buf;
         })
         .on("error", (err) => {
           console.error(err);
-        });
-        return buf;
+        })
+
+        // return buf;
       } catch (e) {
         console.error(e);
         throw new Error(e);
@@ -46,11 +49,12 @@ class GCPStrategy extends Strategy {
 
   /**
    * Write a file to storage
-   * @param path {string} path or filename
-   * @param data {any} Data to write
+   * @param {string} path path or filename
+   * @param {any} data Data to write
+   * @param {boolean} p make public
    * @returns {string} path or filename
    */
-  write(path, data) {
+  write(path, data, p = false) {
     if (path && data && this.bucket) {
       return new Promise((resolve, reject) =>{ 
         const file = this.bucket.file(path);
@@ -60,14 +64,18 @@ class GCPStrategy extends Strategy {
           reject("No File!")
         }
       })
-      .then(async (file) => {
-        const ret = await file.save(data);
-        if (ret) {
-          file.makePublic();
-          return path;
-        } else {
-          throw new Error("Write failed");
-        }
+      .then((file) => {
+        return file.save(data, (err) => {
+          if (!err) {
+            // File written successfully.
+            if (p) {
+              file.makePublic();
+            }
+            return path;
+          } else {
+            throw new Error("Write failed");
+          }
+        });
       })
       .then((path) => {
         // console.debug(path);
