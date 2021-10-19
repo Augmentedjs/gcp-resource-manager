@@ -44,8 +44,7 @@
     "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
-    "@augmentedjs/resource-manager": "^1.0.2",
-    "@google-cloud/storage": "^5.15.3"
+    "@augmentedjs/resource-manager": "^1.0.2"
   },
   "bugs": {
     "url": "https://github.com/Augmentedjs/gcp-resource-manager/issues"
