@@ -58,68 +58,68 @@
           "list",
           "list:class"
         ],
-        "GCPResourceManager.html": [
+        "GCPStrategy.html": [
           "class",
           "cloud",
-          "gcpresourcemanag",
+          "gcpstrategi",
           "googl",
           "manag",
           "resourc",
           "storag",
           "strategi"
         ],
-        "GCPResourceManager.html#bucket": [
-          "bucket",
-          "gcpresourcemanager#bucket",
-          "member"
-        ],
-        "GCPResourceManager.html#read": [
+        "GCPStrategy.html#read": [
           "file",
           "function",
-          "gcpresourcemanager#read",
+          "gcpstrategy#read",
+          "lt;async&gt",
           "path",
           "read",
           "storag"
         ],
-        "GCPResourceManager.html#write": [
+        "GCPStrategy.html#write": [
           "data",
           "file",
           "function",
-          "gcpresourcemanager#writ",
+          "gcpstrategy#writ",
+          "lt;async&gt",
+          "p",
           "path",
           "storag",
           "write"
         ],
-        "GCPResourceManager.html#exists": [
+        "GCPStrategy.html#exists": [
           "check",
           "exist",
           "file",
           "function",
-          "gcpresourcemanager#exist",
+          "gcpstrategy#exist",
+          "lt;async&gt",
           "path",
           "storag"
         ],
-        "GCPResourceManager.html#createReadStream": [
+        "GCPStrategy.html#createReadStream": [
           "creat",
           "createreadstream",
           "function",
-          "gcpresourcemanager#createreadstream",
+          "gcpstrategy#createreadstream",
           "path",
           "read",
           "stream"
         ],
-        "GCPResourceManager.html#readAll": [
+        "GCPStrategy.html#readAll": [
           "content",
           "directori",
           "function",
-          "gcpresourcemanager#readal",
+          "gcpstrategy#readal",
+          "lt;async&gt",
           "path",
           "read",
           "readal",
           "storag"
         ]
       },
-      "length": 10
+      "length": 9
     },
     "tokenStore": {
       "root": {
@@ -223,9 +223,9 @@
               "docs": {},
               "a": {
                 "docs": {
-                  "GCPResourceManager.html#write": {
-                    "ref": "GCPResourceManager.html#write",
-                    "tf": 33.33333333333333
+                  "GCPStrategy.html#write": {
+                    "ref": "GCPStrategy.html#write",
+                    "tf": 20
                   }
                 }
               }
@@ -247,8 +247,8 @@
                         "docs": {},
                         "i": {
                           "docs": {
-                            "GCPResourceManager.html#readAll": {
-                              "ref": "GCPResourceManager.html#readAll",
+                            "GCPStrategy.html#readAll": {
+                              "ref": "GCPStrategy.html#readAll",
                               "tf": 12.5
                             }
                           }
@@ -306,16 +306,16 @@
               "docs": {},
               "d": {
                 "docs": {
-                  "GCPResourceManager.html#read": {
-                    "ref": "GCPResourceManager.html#read",
-                    "tf": 716.6666666666666
+                  "GCPStrategy.html#read": {
+                    "ref": "GCPStrategy.html#read",
+                    "tf": 700
                   },
-                  "GCPResourceManager.html#createReadStream": {
-                    "ref": "GCPResourceManager.html#createReadStream",
+                  "GCPStrategy.html#createReadStream": {
+                    "ref": "GCPStrategy.html#createReadStream",
                     "tf": 16.666666666666664
                   },
-                  "GCPResourceManager.html#readAll": {
-                    "ref": "GCPResourceManager.html#readAll",
+                  "GCPStrategy.html#readAll": {
+                    "ref": "GCPStrategy.html#readAll",
                     "tf": 12.5
                   }
                 },
@@ -331,9 +331,9 @@
                   "docs": {},
                   "l": {
                     "docs": {
-                      "GCPResourceManager.html#readAll": {
-                        "ref": "GCPResourceManager.html#readAll",
-                        "tf": 700
+                      "GCPStrategy.html#readAll": {
+                        "ref": "GCPStrategy.html#readAll",
+                        "tf": 683.3333333333334
                       }
                     }
                   }
@@ -350,8 +350,8 @@
                     "docs": {},
                     "c": {
                       "docs": {
-                        "GCPResourceManager.html": {
-                          "ref": "GCPResourceManager.html",
+                        "GCPStrategy.html": {
+                          "ref": "GCPStrategy.html",
                           "tf": 8.333333333333332
                         }
                       }
@@ -414,24 +414,24 @@
                   "docs": {},
                   "g": {
                     "docs": {
-                      "GCPResourceManager.html": {
-                        "ref": "GCPResourceManager.html",
+                      "GCPStrategy.html": {
+                        "ref": "GCPStrategy.html",
                         "tf": 8.333333333333332
                       },
-                      "GCPResourceManager.html#read": {
-                        "ref": "GCPResourceManager.html#read",
+                      "GCPStrategy.html#read": {
+                        "ref": "GCPStrategy.html#read",
                         "tf": 16.666666666666664
                       },
-                      "GCPResourceManager.html#write": {
-                        "ref": "GCPResourceManager.html#write",
+                      "GCPStrategy.html#write": {
+                        "ref": "GCPStrategy.html#write",
                         "tf": 16.666666666666664
                       },
-                      "GCPResourceManager.html#exists": {
-                        "ref": "GCPResourceManager.html#exists",
+                      "GCPStrategy.html#exists": {
+                        "ref": "GCPStrategy.html#exists",
                         "tf": 12.5
                       },
-                      "GCPResourceManager.html#readAll": {
-                        "ref": "GCPResourceManager.html#readAll",
+                      "GCPStrategy.html#readAll": {
+                        "ref": "GCPStrategy.html#readAll",
                         "tf": 12.5
                       }
                     }
@@ -451,8 +451,8 @@
                       "docs": {},
                       "i": {
                         "docs": {
-                          "GCPResourceManager.html": {
-                            "ref": "GCPResourceManager.html",
+                          "GCPStrategy.html": {
+                            "ref": "GCPStrategy.html",
                             "tf": 8.333333333333332
                           }
                         }
@@ -467,8 +467,8 @@
                   "docs": {},
                   "m": {
                     "docs": {
-                      "GCPResourceManager.html#createReadStream": {
-                        "ref": "GCPResourceManager.html#createReadStream",
+                      "GCPStrategy.html#createReadStream": {
+                        "ref": "GCPStrategy.html#createReadStream",
                         "tf": 16.666666666666664
                       }
                     }
@@ -504,173 +504,132 @@
             "docs": {},
             "p": {
               "docs": {},
-              "r": {
+              "s": {
                 "docs": {},
-                "e": {
+                "t": {
                   "docs": {},
-                  "s": {
+                  "r": {
                     "docs": {},
-                    "o": {
+                    "a": {
                       "docs": {},
-                      "u": {
+                      "t": {
                         "docs": {},
-                        "r": {
+                        "e": {
                           "docs": {},
-                          "c": {
+                          "g": {
                             "docs": {},
-                            "e": {
+                            "i": {
+                              "docs": {
+                                "GCPStrategy.html": {
+                                  "ref": "GCPStrategy.html",
+                                  "tf": 1900
+                                }
+                              }
+                            },
+                            "y": {
                               "docs": {},
-                              "m": {
+                              "#": {
                                 "docs": {},
-                                "a": {
+                                "r": {
                                   "docs": {},
-                                  "n": {
+                                  "e": {
                                     "docs": {},
                                     "a": {
                                       "docs": {},
-                                      "g": {
+                                      "d": {
                                         "docs": {
-                                          "GCPResourceManager.html": {
-                                            "ref": "GCPResourceManager.html",
-                                            "tf": 1900
+                                          "GCPStrategy.html#read": {
+                                            "ref": "GCPStrategy.html#read",
+                                            "tf": 1150
                                           }
                                         },
-                                        "e": {
+                                        "a": {
                                           "docs": {},
-                                          "r": {
+                                          "l": {
+                                            "docs": {
+                                              "GCPStrategy.html#readAll": {
+                                                "ref": "GCPStrategy.html#readAll",
+                                                "tf": 1150
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "w": {
+                                  "docs": {},
+                                  "r": {
+                                    "docs": {},
+                                    "i": {
+                                      "docs": {},
+                                      "t": {
+                                        "docs": {
+                                          "GCPStrategy.html#write": {
+                                            "ref": "GCPStrategy.html#write",
+                                            "tf": 1150
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "e": {
+                                  "docs": {},
+                                  "x": {
+                                    "docs": {},
+                                    "i": {
+                                      "docs": {},
+                                      "s": {
+                                        "docs": {},
+                                        "t": {
+                                          "docs": {
+                                            "GCPStrategy.html#exists": {
+                                              "ref": "GCPStrategy.html#exists",
+                                              "tf": 1150
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "c": {
+                                  "docs": {},
+                                  "r": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "a": {
+                                        "docs": {},
+                                        "t": {
+                                          "docs": {},
+                                          "e": {
                                             "docs": {},
-                                            "#": {
+                                            "r": {
                                               "docs": {},
-                                              "b": {
-                                                "docs": {},
-                                                "u": {
-                                                  "docs": {},
-                                                  "c": {
-                                                    "docs": {},
-                                                    "k": {
-                                                      "docs": {},
-                                                      "e": {
-                                                        "docs": {},
-                                                        "t": {
-                                                          "docs": {
-                                                            "GCPResourceManager.html#bucket": {
-                                                              "ref": "GCPResourceManager.html#bucket",
-                                                              "tf": 1150
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "r": {
-                                                "docs": {},
-                                                "e": {
-                                                  "docs": {},
-                                                  "a": {
-                                                    "docs": {},
-                                                    "d": {
-                                                      "docs": {
-                                                        "GCPResourceManager.html#read": {
-                                                          "ref": "GCPResourceManager.html#read",
-                                                          "tf": 1150
-                                                        }
-                                                      },
-                                                      "a": {
-                                                        "docs": {},
-                                                        "l": {
-                                                          "docs": {
-                                                            "GCPResourceManager.html#readAll": {
-                                                              "ref": "GCPResourceManager.html#readAll",
-                                                              "tf": 1150
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "w": {
-                                                "docs": {},
-                                                "r": {
-                                                  "docs": {},
-                                                  "i": {
-                                                    "docs": {},
-                                                    "t": {
-                                                      "docs": {
-                                                        "GCPResourceManager.html#write": {
-                                                          "ref": "GCPResourceManager.html#write",
-                                                          "tf": 1150
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
                                               "e": {
                                                 "docs": {},
-                                                "x": {
+                                                "a": {
                                                   "docs": {},
-                                                  "i": {
+                                                  "d": {
                                                     "docs": {},
                                                     "s": {
                                                       "docs": {},
                                                       "t": {
-                                                        "docs": {
-                                                          "GCPResourceManager.html#exists": {
-                                                            "ref": "GCPResourceManager.html#exists",
-                                                            "tf": 1150
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "c": {
-                                                "docs": {},
-                                                "r": {
-                                                  "docs": {},
-                                                  "e": {
-                                                    "docs": {},
-                                                    "a": {
-                                                      "docs": {},
-                                                      "t": {
                                                         "docs": {},
-                                                        "e": {
+                                                        "r": {
                                                           "docs": {},
-                                                          "r": {
+                                                          "e": {
                                                             "docs": {},
-                                                            "e": {
+                                                            "a": {
                                                               "docs": {},
-                                                              "a": {
-                                                                "docs": {},
-                                                                "d": {
-                                                                  "docs": {},
-                                                                  "s": {
-                                                                    "docs": {},
-                                                                    "t": {
-                                                                      "docs": {},
-                                                                      "r": {
-                                                                        "docs": {},
-                                                                        "e": {
-                                                                          "docs": {},
-                                                                          "a": {
-                                                                            "docs": {},
-                                                                            "m": {
-                                                                              "docs": {
-                                                                                "GCPResourceManager.html#createReadStream": {
-                                                                                  "ref": "GCPResourceManager.html#createReadStream",
-                                                                                  "tf": 1150
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
+                                                              "m": {
+                                                                "docs": {
+                                                                  "GCPStrategy.html#createReadStream": {
+                                                                    "ref": "GCPStrategy.html#createReadStream",
+                                                                    "tf": 1150
                                                                   }
                                                                 }
                                                               }
@@ -708,8 +667,8 @@
                 "docs": {},
                 "l": {
                   "docs": {
-                    "GCPResourceManager.html": {
-                      "ref": "GCPResourceManager.html",
+                    "GCPStrategy.html": {
+                      "ref": "GCPStrategy.html",
                       "tf": 8.333333333333332
                     }
                   }
@@ -732,8 +691,8 @@
                       "ref": "list_class.html",
                       "tf": 635
                     },
-                    "GCPResourceManager.html": {
-                      "ref": "GCPResourceManager.html",
+                    "GCPStrategy.html": {
+                      "ref": "GCPStrategy.html",
                       "tf": 110
                     }
                   }
@@ -746,8 +705,8 @@
                 "docs": {},
                 "d": {
                   "docs": {
-                    "GCPResourceManager.html": {
-                      "ref": "GCPResourceManager.html",
+                    "GCPStrategy.html": {
+                      "ref": "GCPStrategy.html",
                       "tf": 8.333333333333332
                     }
                   }
@@ -763,8 +722,8 @@
                 "docs": {},
                 "k": {
                   "docs": {
-                    "GCPResourceManager.html#exists": {
-                      "ref": "GCPResourceManager.html#exists",
+                    "GCPStrategy.html#exists": {
+                      "ref": "GCPStrategy.html#exists",
                       "tf": 12.5
                     }
                   }
@@ -780,8 +739,8 @@
                 "docs": {},
                 "t": {
                   "docs": {
-                    "GCPResourceManager.html#createReadStream": {
-                      "ref": "GCPResourceManager.html#createReadStream",
+                    "GCPStrategy.html#createReadStream": {
+                      "ref": "GCPStrategy.html#createReadStream",
                       "tf": 16.666666666666664
                     }
                   },
@@ -807,8 +766,8 @@
                                       "docs": {},
                                       "m": {
                                         "docs": {
-                                          "GCPResourceManager.html#createReadStream": {
-                                            "ref": "GCPResourceManager.html#createReadStream",
+                                          "GCPStrategy.html#createReadStream": {
+                                            "ref": "GCPStrategy.html#createReadStream",
                                             "tf": 700
                                           }
                                         }
@@ -839,8 +798,8 @@
                     "docs": {},
                     "t": {
                       "docs": {
-                        "GCPResourceManager.html#readAll": {
-                          "ref": "GCPResourceManager.html#readAll",
+                        "GCPStrategy.html#readAll": {
+                          "ref": "GCPStrategy.html#readAll",
                           "tf": 12.5
                         }
                       }
@@ -889,6 +848,53 @@
                 }
               }
             }
+          },
+          "t": {
+            "docs": {},
+            ";": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "s": {
+                  "docs": {},
+                  "y": {
+                    "docs": {},
+                    "n": {
+                      "docs": {},
+                      "c": {
+                        "docs": {},
+                        "&": {
+                          "docs": {},
+                          "g": {
+                            "docs": {},
+                            "t": {
+                              "docs": {
+                                "GCPStrategy.html#read": {
+                                  "ref": "GCPStrategy.html#read",
+                                  "tf": 33.33333333333333
+                                },
+                                "GCPStrategy.html#write": {
+                                  "ref": "GCPStrategy.html#write",
+                                  "tf": 20
+                                },
+                                "GCPStrategy.html#exists": {
+                                  "ref": "GCPStrategy.html#exists",
+                                  "tf": 33.33333333333333
+                                },
+                                "GCPStrategy.html#readAll": {
+                                  "ref": "GCPStrategy.html#readAll",
+                                  "tf": 33.33333333333333
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "m": {
@@ -901,52 +907,9 @@
                 "docs": {},
                 "g": {
                   "docs": {
-                    "GCPResourceManager.html": {
-                      "ref": "GCPResourceManager.html",
+                    "GCPStrategy.html": {
+                      "ref": "GCPStrategy.html",
                       "tf": 8.333333333333332
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "e": {
-            "docs": {},
-            "m": {
-              "docs": {},
-              "b": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "r": {
-                    "docs": {
-                      "GCPResourceManager.html#bucket": {
-                        "ref": "GCPResourceManager.html#bucket",
-                        "tf": 110
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "b": {
-          "docs": {},
-          "u": {
-            "docs": {},
-            "c": {
-              "docs": {},
-              "k": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "t": {
-                    "docs": {
-                      "GCPResourceManager.html#bucket": {
-                        "ref": "GCPResourceManager.html#bucket",
-                        "tf": 750
-                      }
                     }
                   }
                 }
@@ -962,16 +925,16 @@
               "docs": {},
               "e": {
                 "docs": {
-                  "GCPResourceManager.html#read": {
-                    "ref": "GCPResourceManager.html#read",
+                  "GCPStrategy.html#read": {
+                    "ref": "GCPStrategy.html#read",
                     "tf": 16.666666666666664
                   },
-                  "GCPResourceManager.html#write": {
-                    "ref": "GCPResourceManager.html#write",
+                  "GCPStrategy.html#write": {
+                    "ref": "GCPStrategy.html#write",
                     "tf": 16.666666666666664
                   },
-                  "GCPResourceManager.html#exists": {
-                    "ref": "GCPResourceManager.html#exists",
+                  "GCPStrategy.html#exists": {
+                    "ref": "GCPStrategy.html#exists",
                     "tf": 12.5
                   }
                 }
@@ -992,24 +955,24 @@
                       "docs": {},
                       "n": {
                         "docs": {
-                          "GCPResourceManager.html#read": {
-                            "ref": "GCPResourceManager.html#read",
+                          "GCPStrategy.html#read": {
+                            "ref": "GCPStrategy.html#read",
                             "tf": 110
                           },
-                          "GCPResourceManager.html#write": {
-                            "ref": "GCPResourceManager.html#write",
+                          "GCPStrategy.html#write": {
+                            "ref": "GCPStrategy.html#write",
                             "tf": 110
                           },
-                          "GCPResourceManager.html#exists": {
-                            "ref": "GCPResourceManager.html#exists",
+                          "GCPStrategy.html#exists": {
+                            "ref": "GCPStrategy.html#exists",
                             "tf": 110
                           },
-                          "GCPResourceManager.html#createReadStream": {
-                            "ref": "GCPResourceManager.html#createReadStream",
+                          "GCPStrategy.html#createReadStream": {
+                            "ref": "GCPStrategy.html#createReadStream",
                             "tf": 110
                           },
-                          "GCPResourceManager.html#readAll": {
-                            "ref": "GCPResourceManager.html#readAll",
+                          "GCPStrategy.html#readAll": {
+                            "ref": "GCPStrategy.html#readAll",
                             "tf": 110
                           }
                         }
@@ -1022,32 +985,37 @@
           }
         },
         "p": {
-          "docs": {},
+          "docs": {
+            "GCPStrategy.html#write": {
+              "ref": "GCPStrategy.html#write",
+              "tf": 20
+            }
+          },
           "a": {
             "docs": {},
             "t": {
               "docs": {},
               "h": {
                 "docs": {
-                  "GCPResourceManager.html#read": {
-                    "ref": "GCPResourceManager.html#read",
-                    "tf": 50
-                  },
-                  "GCPResourceManager.html#write": {
-                    "ref": "GCPResourceManager.html#write",
+                  "GCPStrategy.html#read": {
+                    "ref": "GCPStrategy.html#read",
                     "tf": 33.33333333333333
                   },
-                  "GCPResourceManager.html#exists": {
-                    "ref": "GCPResourceManager.html#exists",
+                  "GCPStrategy.html#write": {
+                    "ref": "GCPStrategy.html#write",
+                    "tf": 20
+                  },
+                  "GCPStrategy.html#exists": {
+                    "ref": "GCPStrategy.html#exists",
+                    "tf": 33.33333333333333
+                  },
+                  "GCPStrategy.html#createReadStream": {
+                    "ref": "GCPStrategy.html#createReadStream",
                     "tf": 50
                   },
-                  "GCPResourceManager.html#createReadStream": {
-                    "ref": "GCPResourceManager.html#createReadStream",
-                    "tf": 50
-                  },
-                  "GCPResourceManager.html#readAll": {
-                    "ref": "GCPResourceManager.html#readAll",
-                    "tf": 50
+                  "GCPStrategy.html#readAll": {
+                    "ref": "GCPStrategy.html#readAll",
+                    "tf": 33.33333333333333
                   }
                 }
               }
@@ -1064,9 +1032,9 @@
                 "docs": {},
                 "e": {
                   "docs": {
-                    "GCPResourceManager.html#write": {
-                      "ref": "GCPResourceManager.html#write",
-                      "tf": 700
+                    "GCPStrategy.html#write": {
+                      "ref": "GCPStrategy.html#write",
+                      "tf": 686.6666666666666
                     }
                   }
                 }
@@ -1084,9 +1052,9 @@
                 "docs": {},
                 "t": {
                   "docs": {
-                    "GCPResourceManager.html#exists": {
-                      "ref": "GCPResourceManager.html#exists",
-                      "tf": 712.5
+                    "GCPStrategy.html#exists": {
+                      "ref": "GCPStrategy.html#exists",
+                      "tf": 695.8333333333334
                     }
                   }
                 }
@@ -1095,11 +1063,10 @@
           }
         }
       },
-      "length": 59
+      "length": 61
     },
     "corpusTokens": [
       "augmented.j",
-      "bucket",
       "check",
       "class",
       "cloud",
@@ -1113,21 +1080,21 @@
       "exist",
       "file",
       "function",
-      "gcpresourcemanag",
-      "gcpresourcemanager#bucket",
-      "gcpresourcemanager#createreadstream",
-      "gcpresourcemanager#exist",
-      "gcpresourcemanager#read",
-      "gcpresourcemanager#readal",
-      "gcpresourcemanager#writ",
+      "gcpstrategi",
+      "gcpstrategy#createreadstream",
+      "gcpstrategy#exist",
+      "gcpstrategy#read",
+      "gcpstrategy#readal",
+      "gcpstrategy#writ",
       "global",
       "googl",
       "index",
       "list",
       "list:class",
+      "lt;async&gt",
       "manag",
-      "member",
       "next",
+      "p",
       "path",
       "read",
       "readal",
@@ -1180,74 +1147,64 @@
       "description": "",
       "body": ""
     },
-    "GCPResourceManager.html": {
-      "id": "GCPResourceManager.html",
+    "GCPStrategy.html": {
+      "id": "GCPStrategy.html",
       "kind": "class",
-      "title": "GCPResourceManager",
-      "longname": "GCPResourceManager",
-      "name": "GCPResourceManager",
-      "tags": "GCPResourceManager",
+      "title": "GCPStrategy",
+      "longname": "GCPStrategy",
+      "name": "GCPStrategy",
+      "tags": "GCPStrategy",
       "summary": "",
       "description": "Google Cloud Storage Resource Manager Strategy",
       "body": ""
     },
-    "GCPResourceManager.html#bucket": {
-      "id": "GCPResourceManager.html#bucket",
-      "kind": "member",
-      "title": "bucket",
-      "longname": "GCPResourceManager#bucket",
-      "name": "bucket",
-      "tags": "GCPResourceManager#bucket bucket",
-      "summary": "",
-      "description": ""
-    },
-    "GCPResourceManager.html#read": {
-      "id": "GCPResourceManager.html#read",
+    "GCPStrategy.html#read": {
+      "id": "GCPStrategy.html#read",
       "kind": "function",
-      "title": "read( path )",
-      "longname": "GCPResourceManager#read",
+      "title": "&lt;async&gt; read( path )",
+      "longname": "GCPStrategy#read",
       "name": "read",
-      "tags": "GCPResourceManager#read read",
+      "tags": "GCPStrategy#read read",
       "summary": "",
       "description": "Read a file from storage"
     },
-    "GCPResourceManager.html#write": {
-      "id": "GCPResourceManager.html#write",
+    "GCPStrategy.html#write": {
+      "id": "GCPStrategy.html#write",
       "kind": "function",
-      "title": "write( path, data )",
-      "longname": "GCPResourceManager#write",
+      "title": "&lt;async&gt; write( path, data, p )",
+      "longname": "GCPStrategy#write",
       "name": "write",
-      "tags": "GCPResourceManager#write write",
+      "tags": "GCPStrategy#write write",
       "summary": "",
       "description": "Write a file to storage"
     },
-    "GCPResourceManager.html#exists": {
-      "id": "GCPResourceManager.html#exists",
+    "GCPStrategy.html#exists": {
+      "id": "GCPStrategy.html#exists",
       "kind": "function",
-      "title": "exists( path )",
-      "longname": "GCPResourceManager#exists",
+      "title": "&lt;async&gt; exists( path )",
+      "longname": "GCPStrategy#exists",
       "name": "exists",
-      "tags": "GCPResourceManager#exists exists",
+      "tags": "GCPStrategy#exists exists",
       "summary": "",
       "description": "Checks if a file exists on storage"
     },
-    "GCPResourceManager.html#createReadStream": {
-      "id": "GCPResourceManager.html#createReadStream",
+    "GCPStrategy.html#createReadStream": {
+      "id": "GCPStrategy.html#createReadStream",
       "kind": "function",
       "title": "createReadStream( path )",
-      "longname": "GCPResourceManager#createReadStream",
+      "longname": "GCPStrategy#createReadStream",
       "name": "createReadStream",
-      "tags": "GCPResourceManager#createReadStream createReadStream",
+      "tags": "GCPStrategy#createReadStream createReadStream",
       "summary": "",
       "description": "Creates a read stream"
     },
-    "GCPResourceManager.html#readAll": {
-      "id": "GCPResourceManager.html#readAll",
+    "GCPStrategy.html#readAll": {
+      "id": "GCPStrategy.html#readAll",
       "kind": "function",
-      "title": "readAll( path )",
-      "longname": "GCPResourceManager#readAll",
+      "title": "&lt;async&gt; readAll( path )",
+      "longname": "GCPStrategy#readAll",
       "name": "readAll",
-      "tags": "GCPResourceManager#readAll readAll",
+      "tags": "GCPStrategy#readAll readAll",
       "summary": "",
       "description": "Reads the contents on a 'directory' in storage"
     }

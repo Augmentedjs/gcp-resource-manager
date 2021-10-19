@@ -8,10 +8,8 @@ Resource Manager for Google Cloud Platform (storage)
 
 ### Table of Contents
 
-*   [GCPResourceManager](#gcpresourcemanager)
+*   [GCPStrategy](#gcpstrategy)
     *   [Parameters](#parameters)
-    *   [bucket](#bucket)
-        *   [Properties](#properties)
     *   [read](#read)
         *   [Parameters](#parameters-1)
     *   [write](#write)
@@ -22,8 +20,10 @@ Resource Manager for Google Cloud Platform (storage)
         *   [Parameters](#parameters-4)
     *   [readAll](#readall)
         *   [Parameters](#parameters-5)
+*   [bucket](#bucket)
+    *   [Properties](#properties)
 
-## GCPResourceManager
+## GCPStrategy
 
 **Extends Strategy**
 
@@ -33,19 +33,13 @@ Google Cloud Storage Resource Manager Strategy
 
 *   `options`   (optional, default `{}`)
 
-### bucket
-
-#### Properties
-
-*   `bucket` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** GCP Storage Bucket
-
 ### read
 
 Read a file from storage
 
 #### Parameters
 
-*   `path`  {string} path or filename
+*   `path` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** path or filename
 
 Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Returns file contents
 
@@ -55,8 +49,9 @@ Write a file to storage
 
 #### Parameters
 
-*   `path`  {string} path or filename
-*   `data`  {any} Data to write
+*   `path` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** path or filename
+*   `data` **any** Data to write
+*   `p` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** make public (optional, default `false`)
 
 Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** path or filename
 
@@ -66,7 +61,7 @@ Checks if a file exists on storage
 
 #### Parameters
 
-*   `path`  {string} path or filename
+*   `path` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** path or filename
 
 Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** Returns true if exists
 
@@ -76,7 +71,7 @@ Creates a read stream
 
 #### Parameters
 
-*   `path`  {string} path or filename
+*   `path` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** path or filename
 
 Returns **ReadStreamHandle** Returns a read stream handle
 
@@ -86,6 +81,12 @@ Reads the contents on a 'directory' in storage
 
 #### Parameters
 
-*   `path`  {string} path or filename
+*   `path` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** path or filename
 
 Returns **[array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)** Returns an array of files
+
+## bucket
+
+### Properties
+
+*   `bucket` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** GCP Storage Bucket

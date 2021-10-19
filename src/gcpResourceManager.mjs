@@ -8,6 +8,7 @@ class GCPStrategy extends Strategy {
   constructor(options = {}) {
     super(options);
     /**
+     * @name bucket
      * @property {object} bucket GCP Storage Bucket
      */
     this.bucket = (options.bucket) ? options.bucket : null;
@@ -15,36 +16,34 @@ class GCPStrategy extends Strategy {
 
   /**
    * Read a file from storage
-   * @param path {string} path or filename
+   * @param {string} path path or filename
    * @returns {string} Returns file contents
+   * @async
    */
   read(path) {
-    if (path && this.bucket) {
-      try {
+    return new Promise((resolve, reject) => {
+      if (path && this.bucket) {
         // console.debug("read", path);
         const stream = this.createReadStream(path);
         // console.log('Concat Data');
         let buf = "";
-        return stream
+        stream
         .on("data", (d) => {
           buf += d;
         })
         .on("end", () => {
-          console.info("buf", buf);
+          console.debug("buf", buf);
           // console.log("End");
-          return buf;
+          resolve(buf);
         })
         .on("error", (err) => {
           console.error(err);
-        })
-
-        // return buf;
-      } catch (e) {
-        console.error(e);
-        throw new Error(e);
+          reject(err);
+        });
+      } else {
+        reject("Nothing");
       }
-    }
-    return null;
+    });
   };
 
   /**
@@ -53,66 +52,71 @@ class GCPStrategy extends Strategy {
    * @param {any} data Data to write
    * @param {boolean} p make public
    * @returns {string} path or filename
+   * @async
    */
   write(path, data, p = false) {
-    if (path && data && this.bucket) {
-      return new Promise((resolve, reject) =>{ 
+    return new Promise((resolve, reject) =>{ 
+      if (path && data && this.bucket) {
         const file = this.bucket.file(path);
         if (file) {
           resolve(file);
         } else {
-          reject("No File!")
+          reject("No File!");
         }
-      })
-      .then((file) => {
-        return file.save(data, (err) => {
-          if (!err) {
-            // File written successfully.
-            if (p) {
-              file.makePublic();
-            }
-            return path;
-          } else {
-            throw new Error("Write failed");
+      } else {
+        reject("No path or bucket!");
+      }
+    })
+    .then((file) => {
+      return file.save(data, (err) => {
+        if (!err) {
+          // File written successfully.
+          if (p) {
+            file.makePublic();
           }
-        });
-      })
-      .then((path) => {
-        // console.debug(path);
-        return path;
-      })
-      .catch((e) => {
-        console.error(e);
-        throw new Error(e);
+          return path;
+        } else {
+          throw new Error("Write failed");
+        }
       });
-    }
-    return null;
+    })
+    .then((path) => {
+      // console.debug(path);
+      return path;
+    })
+    .catch((e) => {
+      console.error(e);
+      throw new Error(e);
+    });
   };
 
   /**
    * Checks if a file exists on storage
-   * @param path {string} path or filename
+   * @param {string} path path or filename
    * @returns {boolean} Returns true if exists
+   * @async
    */
   exists(path) {
-    if (path && this.bucket) {
-      try {
+    return new Promise((resolve, reject) => {
+      if (path && this.bucket) {
         const file = this.bucket.file(path);
         file.exists((err, exists) => {
           if (!err) {
-            return exists;
+            resolve(exists);
+          } else {
+            console.error(err);
+            reject(err);
           }
-          console.error(err);
         });
-      } catch (err) {
+      } else {
+        reject("no path or bucket!");
       }
-    }
-    return false;
+    });
   };
 
   /**
    * Creates a read stream
-   * @param path {string} path or filename
+   * @param {string} path path or filename
    * @returns {ReadStreamHandle} Returns a read stream handle
    */
   createReadStream(path) {
@@ -127,15 +131,19 @@ class GCPStrategy extends Strategy {
 
   /**
    * Reads the contents on a 'directory' in storage
-   * @param path {string} path or filename
+   * @param {string} path path or filename
    * @returns {array} Returns an array of files
+   * @async
    */
   readAll(path) {
-    if (path && this.bucket) {
-      const [files] = this.bucket.getFiles();
-      return files;
-    }
-    return null;
+    return new Promise((resolve, reject) => {
+      if (path && this.bucket) {
+        const [files] = this.bucket.getFiles();
+        resolve(files);
+      } else {
+        reject("No path or bucket!");
+      }
+    });
   };
 };
 
