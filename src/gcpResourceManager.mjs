@@ -43,6 +43,10 @@ class GCPStrategy extends Strategy {
       } else {
         reject("Nothing");
       }
+    })
+    .catch((e) => {
+      console.error(e);
+      throw new Error(e);
     });
   };
 
@@ -76,7 +80,7 @@ class GCPStrategy extends Strategy {
           }
           return path;
         } else {
-          throw new Error("Write failed");
+          throw new Error(`Write failed: ${(err && err.errors && err.errors[0] && err.errors[0].message ? err.errors[0].message : "")}`);
         }
       });
     })
