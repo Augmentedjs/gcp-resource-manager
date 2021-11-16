@@ -135,14 +135,15 @@ class GCPStrategy extends Strategy {
 
   /**
    * Reads the contents on a 'directory' in storage
-   * @param {string} path path or filename
+   * @param {string} path path or filename (optional to filter a path prefix)
    * @returns {array} Returns an array of files
    * @async
    */
   readAll(path) {
     return new Promise((resolve, reject) => {
-      if (path && this.bucket) {
-        const [files] = this.bucket.getFiles();
+      if (this.bucket) {
+        const options = (path) ? { "prefix": path } : {};
+        const [files] = this.bucket.getFiles(options);
         resolve(files);
       } else {
         reject("No path or bucket!");
