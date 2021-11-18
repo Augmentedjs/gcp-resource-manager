@@ -32,7 +32,7 @@ class GCPStrategy extends Strategy {
           buf += d;
         })
         .on("end", () => {
-          console.debug("buf", buf);
+          // console.debug("buf", buf);
           // console.log("End");
           resolve(buf);
         })
@@ -139,16 +139,19 @@ class GCPStrategy extends Strategy {
    * @returns {array} Returns an array of files
    * @async
    */
-  readAll(path) {
-    return new Promise((resolve, reject) => {
+   async readAll(path) {
+    try {
       if (this.bucket) {
-        const options = (path) ? { "prefix": path } : {};
-        const [files] = this.bucket.getFiles(options);
-        resolve(files);
+        const options = (path) ? { "prefix": path } : null;
+        // console.debug("reading", path, options);
+        const files = await this.bucket.getFiles(options);
+        return files;
       } else {
-        reject("No path or bucket!");
+        throw new Error("No bucket!");
       }
-    });
+    } catch(e) {
+      throw e;
+    }
   };
 };
 
