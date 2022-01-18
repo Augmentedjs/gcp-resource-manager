@@ -153,6 +153,19 @@ class GCPStrategy extends Strategy {
       throw e;
     }
   };
+
+  async delete(path) {
+    try {
+      if (this.bucket) {
+        const files = await this.bucket.file(path).delete();
+        return files;
+      } else {
+        throw new Error("No bucket!");
+      }
+    } catch(e) {
+      throw e;
+    }
+  };
 };
 
 export default GCPStrategy;
